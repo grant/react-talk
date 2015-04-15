@@ -7,3 +7,5 @@ Learn about React.js, the technology that's powering the frontend of Facebook, A
 I'll have a special presentation on using React to make rocking user interfaces that can scale. You'll also learn how I built dubhacks.co and how you can too.
 
 Hope you guys come! Should be fun!
+
+Today we're creating something similar to https://www.google.com/doodles/155th-anniversary-of-the-pony-express
