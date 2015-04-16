@@ -241,26 +241,6 @@
 				</section>
 
 				<section>
-					<h3 class="blue">The jQuery way</h3>
-					<pre><code class="javascript">function setupHome () {
-  // Sets up map view
-  $('.back-page').click(function (e) {
-    if ($(e.target).hasClass('back-page')) {
-      $('.back-page').toggleClass('map-view');
-    }
-  });
-
-  var lastTime = $('.events.list').data('time');
-  function initialize() {
-    function updateCenter () {
-      $.get('/api/location', function (location) {
-        var panPoint = new google.maps.LatLng(location.lat, location.lng);
-        map.panTo(panPoint);
-      });
-    }</code></pre>
-				</section>
-
-				<section>
 					<h1 class="blue">How it works</h1>
 				</section>
 
@@ -286,6 +266,7 @@
 						<li>Components can contain components</li>
 						<li><span class="blue"><code>props</code>: </span>Immutable values</li>
 						<li><span class="blue"><code>state</code>: </span>Mutable values</li>
+						<li><span class="blue"><code>render()</code>: </span>Returns the component's html</li>
 					</ul>
 				</section>
 
@@ -295,6 +276,40 @@
 
 				<section>
 					<img src="images/dubhacks.png" alt="">
+				</section>
+
+				<section>
+					<h2 class="blue">So how do we update data?</h2>
+				</section>
+
+				<section>
+					<h3 class="blue">The jQuery way</h3>
+					<pre><code class="javascript">function setupHome () {
+  // Sets up map view
+  $('.back-page').click(function (e) {
+    if ($(e.target).hasClass('back-page')) {
+      $('.back-page').toggleClass('map-view');
+    }
+  });
+
+  var lastTime = $('.events.list').data('time');
+  function initialize() {
+    function updateCenter () {
+      $.get('/api/location', function (location) {
+        var panPoint = new google.maps.LatLng(location.lat, location.lng);
+        map.panTo(panPoint);
+      });
+    }</code></pre>
+    			<p class='fragment'>Global <code>$</code> DOM selector/event binding madness</p>
+				</section>
+
+				<section>
+					<h3 class="blue">The React way</h3>
+					<ul>
+						<li class="fragment">No globals</li>
+						<li class="fragment">Keep track of state per component (and keep it small!)</li>
+						<li class="fragment">Have unidirectional data flow.</li>
+					</ul>
 				</section>
 
 				<section>
@@ -360,14 +375,28 @@ React.render(&lt;HelloMessage name="UW Hackers" /&gt;, mountNode);</code></pre>
           <h2 class="orange">That's it!</h2>
         </section>
 
+				<section data-background-color="rgb(248, 174, 65)">
+					<h1 class='darkorange'>Facebook Comments</h1>
+				</section>
+
         <section data-background="http://media.giphy.com/media/eCkzKWhR2vRL2/giphy.gif">
-          <h2 class="blue">Booyah!</h2>
+          <h2 class="orange">Booyah!</h2>
         </section>
 
 				<section data-background='white'>
 					<h2>React is Open Sourced</h2>
 					<h3 class='lightgray'><a href="github.com/facebook/react">github.com/facebook/react</a></h3>
 					<img src="images/github.svg" alt="">
+				</section>
+
+				<section data-background-color="rgb(248, 174, 65)">
+					<h2 class="darkorange">References</h2>
+					<ul class='white'>
+						<li><a href="https://facebook.github.io/react/docs/getting-started.html">Getting Started</a></li>
+						<li><a href="https://github.com/grant/react-talk">Source code of this talk</a></li>
+						<li><a href="https://github.com/dubhacks/15s">Source code of DubHacks</a></li>
+						<li><a href="https://www.youtube.com/watch?v=XxVg_s8xAms">Intro to React Video</a></li>
+					</ul>
 				</section>
 
          <section>
@@ -378,7 +407,7 @@ React.render(&lt;HelloMessage name="UW Hackers" /&gt;, mountNode);</code></pre>
         </section>
 
         <section>
-          <h1 class="blue" style='text-align:left'>The End</h1>
+          <h1 class="orange" style='text-align:left'>The End</h1>
           <h4 style='text-align:left'>Thank you!</h4>
           <h6 style='text-align:left'><small>Questions‽</small></h6>
           <p style='text-align:left;font-size:70%'>
