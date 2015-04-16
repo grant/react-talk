@@ -1,4 +1,4 @@
-# Intro to React
+# React.js: The Frontend Framework of the Future
 
 ##### 2015.04.16  | [Facebook Event](https://www.facebook.com/events/360945337433643/) | by [Grant Timmerman](http://grant.cm/)
 
