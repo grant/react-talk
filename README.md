@@ -10,6 +10,7 @@ Check out the demos in the `demo` folder.
 
 ### Resources
 
+- [Video](https://www.youtube.com/watch?v=iVVZfPbNCtI)
 - [Talk slides](http://grant.github.io/react-talk)
 - [React getting started](https://facebook.github.io/react/docs/getting-started.html)
 - [Source code of this talk](https://github.com/grant/react-talk)
